@@ -1,0 +1,736 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta charset="UTF-8">
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="js/slick.js"></script>
+<meta property="og:title" content="7-й HR івент. Менеджмент та люди" />
+<meta property="og:description" content="Это мероприятие, на котором можно познакомиться с очень интересными людьми, отследить тенденции, получить массу удовольствия и кейсов от спикеров с большим опытом!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hr.jo.in.ua/" />
+<meta property="og:image" content="http://hr.jo.in.ua/img/og-img.jpg" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HR Event - форум управлiння персоналом</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="fonts/css/fontawesome-all.css" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117753895-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117753895-1');
+    </script>
+</head>
+<body>
+   
+    <section class="scroll-spy" data-menu-id="new-home" id="home" data-menu-id="item-1">
+        <div class="bg">
+               <div class="center">
+                    <div class="headerLine">
+<!--                        <h1 id="logo"><a href="#home" class="logo-link"><span class="themeColor">HR</span><span class="colorWhite">Event</span></a></h1>-->
+                        <h1 id="logo"><a href="#home" class="logo-link"><img class="logo" src="img/logo.png" alt="7-й HR івент. Менеджмент та люди"></a></h1>
+                        <nav id="mainMenu">
+                            <ul class="menuRow">
+                                <li class="menuItem"><a id="new-home" class="linkItem" href="#home">Головна</a></li>
+                                <li class="menuItem"><a id="new-about" class="linkItem" href="#about">Форум</a></li>
+                                <li class="menuItem"><a id="new-schedule" class="linkItem" href="#schedule">Програма</a></li>
+                                <li class="menuItem"><a id="new-speakers" class="linkItem" href="#speakers">Спікери</a></li>
+                                <li class="menuItem"><a id="new-pricing" class="linkItem" href="#pricing">Квитки</a></li>
+                                <li class="menuItem"><a id="new-testimonials" class="linkItem" href="#testimonials">Відгуки</a></li>
+                                <li class="menuItem"><a id="new-venue" class="linkItem" href="#venue">Контакти</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            <div class="wrapper">
+               <div class="empty-div"></div>
+                <div class="homeSecondLine">
+                    <div>
+                        <div class="eventName">7-й HR івент. Менеджмент<br>та люди</div>
+                        <div class="subText">9 червня 2018, Київ, IQ Business Center</div>
+                    </div>
+                    <div class="reserveForm">
+                        <fieldset>
+                            <legend class="orderHeader">Придбати квиток</legend>
+                            <label for="name"></label><input class="input" placeholder="Прізвище та ім'я" type="text" id="name">
+                            <label for="email"></label><input class="input" placeholder="Електронна адреса" type="email" id="email">
+                            <label for="phone"></label><input class="input" placeholder="Номер телефону" type="email" id="phone">
+                        </fieldset>
+                        <input class="submit-btn" type="button" value="ПРИДБАТИ!" onclick="buyTicket(); sendEmail()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="wtf">
+       <div class="wft-wrap">
+           <div class="wtf-columns">
+                <p class="wtf-text"><b>Запрошуємо:</b> HR-спеціалістів, управлінців персоналом, рекрутерів, керівників департаментів, власників бізнесу.</p>
+                <p class="wtf-text"><b>Ви навчитесь:</b> використовувати новітні технології (гейміфікацію) та емоційний інтелект в роботі, перейняти успішний досвід від компаній, у яких це виходить на 100%.</p>
+                    <p class="wtf-text"><b>Фокус на інструментах з:</b></p>
+                    <ul class="wtf-list">
+                        <li class="wtf-indent">Розвитку hr департаменту</li>
+                        <li class="wtf-indent">Відбору працівників</li>
+                        <li class="wtf-indent">Адаптації та навчання</li>
+                        <li class="wtf-indent">Мотивації та розвитку корпоративної культури</li>
+                        <li class="wtf-indent">Командотворення, комунікації в колективі, вирішенні конфліктів.</li>
+                        <li class="wtf-indent">Розвитку компанії в напрямку ефективного бренду роботодавця.</li>
+                    </ul>
+            </div>
+            <img src="img/wtf.JPG" class="wtf-img">
+        </div>
+    </section>
+    
+    <section id="countDown">
+        <div class="countLeft">
+                 
+                <div class="countHeader">Генеральний партнер</div>
+                <div class="eventStartBody"><a href="https://www.work.ua/" target="_blank"><img src="img/partners/workua.png" alt="work.ua" class="general-partner"></a><p class="gen-part-desc">Cайт пошуку работи №1 в Україні.</p></div>
+            
+        </div>
+        <div class="countRight">
+            <div class="countHeader">До форуму залишилось</div>
+                <div class="timer">
+                     <div class="timer_round">
+                        <div class="day_box"></div>
+                         <span id="days"></span>
+                         <p class="timer_desc">днів</p>
+                     </div>
+                     <div class="timer_round">
+                        <div class="hour_box"></div>
+                         <span id="hours"></span>
+                         <p class="timer_desc">год</p>
+                     </div>
+                     <div class="timer_round">
+                        <div class="min_box"></div>
+                         <span id="minutes"></span>
+                         <p class="timer_desc">хв</p>
+                     </div>
+                     <div class="timer_round">
+                        <div class="sec_box"></div>
+                         <span id="seconds"></span>
+                         <p class="timer_desc">сек</p>
+                     </div>
+                </div>
+        </div>
+    </section>
+    
+    <section class="scroll-spy" data-menu-id="new-about" id="about">
+        <div class="header">В кількох словах про форум</div>
+        <div class="about-content">
+            <div class="about-cart">
+                <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
+                <div class="cart-content">
+                    <div class="about-header">Нетворкінг за кавою</div>
+                    <div class="about-descr">Нетворкінг - мережа зв'язків та контактів. Хіба може бути кращий привід до розмови, ніж горнятко кави й тістечко? Ми переконані, що якісний нетворкінг найцінніша частина будь-якої події!</div>
+                </div>
+            </div>
+            <div class="about-cart">
+                <div class="icon"><i class="fa fa-certificate" aria-hidden="true"></i></div>
+                <div class="cart-content">
+                    <div class="about-header">Сертифікати учасника</div>
+                    <div class="about-descr">HR івент проходить за підтримки міжнародного клубу JCI, а отже сертифікат визнається у всіх країнах, де представлена JCI. Більше про JCI читайте тут jci.cc.</div>
+                </div>
+            </div>
+            <div class="about-cart">
+                <div class="icon"><i class="fa fa-lightbulb" aria-hidden="true"></i></div>
+                <div class="cart-content">
+                    <div class="about-header">Особлива атмосфера для ідей!</div>
+                    <div class="about-descr">І з професіоналами буває - коли через буденність завдань не бачиш їх інноваційного вирішення! Інновації - за них платять найбільше. Часом достатньо просто розказати про своє наболіле, прислухатись до погляду збоку, особливо експертного, і вуаля - повертаєтесь на роботу з успішним рішенням завдання і премією!</div>
+                </div>
+            </div>
+            <div class="about-cart">
+                <div class="icon"><i class="fa fa-info-circle" aria-hidden="true"></i></div>
+                <div class="cart-content">
+                    <div class="about-header">Інформація з перших рук!</div>
+                    <div class="about-descr">Лиш перевірені поради! Цього не прочитати в модних блогах, не почути на традиційних HR-курсах. Мова про реальні кейси провідних гравців ринку України! Чому українські гіганти вкладають гроші і час в програми та інноваційні інструменти для роботи HR, розвиток корпоративної культури? "Важкі" працівники - чи можна їх перетворити у перевагу для компанії?</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scroll-spy" data-menu-id="new-schedule" id="schedule">
+       <div class="header-white">Програма форуму</div>
+       <div class="schedule-wrap">
+           <div class="download"><a href="img/program.pdf" class="download-schedule" target="_blank">Завантажити програму</a></div>
+           <div class="schedule-day">
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">9:00 - 10:00</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/regist.png"></div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">Реєстрація учасників та ранкова кава</div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">10:00 - 10:15</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/start.png"></div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">Офіційне відкриття</div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">10:15 - 12:00</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/team.jpg"></div>
+                           <div class="position bold">Оксана Тюпа</div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">HR на фрілансі. Корпоративні<br> переваги  для працівників.</div>
+                           <div class="speech-descr">Оцінка кандидатів на співбесіді - методика, програми, аналіз даних. Управління плинністю на етапі відбору.<br>HR на фрілансі: можливості та ризики.<br>Як домовитися про корпоративні переваги для працівників  (спортзал, пальне, розваги: кінотеатр, картинг та ін.)</div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">12:00 - 12:15</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/tea.png"></div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">Кава-пауза</div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">12:15 - 14:00</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/game.png"></div>
+                           <div class="position bold">Михайло Тустов</div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">Гейміфікація в HR</div>
+                           <div class="speech-descr">Тренер Академії ДТЕК, бізнес-тренер, коуч, гейміфікатор, консультант з управління персоналом. <br>Що таке гейміфікація в HR? Як застосовувати принципи гейміфікації для підвищення продуктивності працівників?
+3-4 кейси – праклади гейміфікації: які інструменти використано, як було реалізовано, які результати </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">14:00 - 15:00</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/dinner.png"></div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">Обід</div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">15:00 - 16:30</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/schedule_speaker_3.jpg"></div>
+                           <div class="position bold">Наталія Чорній</div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">HR-бренд Компанії та <br> корпоративна культура</div>
+                           <div class="speech-descr">Керівник відділу персоналу РК ЖЖУК (МОБІЖУК та 2Cups) <br>Корпоративна культура - стратегічна перевага. Як зробити працівників щасливими. EVP для працівників в середині компанії та ззовні. 5 основних мотивів, які спонукають Компанію зайнятися творенням HR бренду. </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">16:30 - 18:15</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/stress.png"></div>
+                           <div class="position bold">Євген Семехін</div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">Стрес-менеджмент</div>
+                           <div class="speech-descr">Експерт в області нейромаркетингу та комунікацій. Входить в ТОП-12 PR-фахівців України 2016 року, категорія "Високопотенційні PR-профі". <br> Практичні інструменти як перестати нервувати на роботі, жити і працювати без стресів.
+Останні методики роботи зі стресами. Нейропрограмування.
+Як мінімізувати негативний вплив та чи можна стрес  перетворити у ефективний аспект для роботи компанії.
+</div>
+                       </div>
+                   </div>
+               </div>
+               <div class="speech-entry">
+                   <div class="speech-time"><span class="bold">18:15 - 18:30</span></div>
+                   <div class="speeker">
+                       <div class="schedule-photo">
+                           <div class="picture"><img src="img/schedule/finish.png"></div>
+                       </div>
+                       <div class="schedule-add-info">
+                           <div class="speach-title">Церемонія закриття</div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+</section>
+    
+    <section class="scroll-spy" data-menu-id="new-speakers" id="speakers">
+        <div class="header">Спікери форуму</div>
+        
+        <div class="speakersWrap">
+            <div id="speaker-card" class="one">
+                <div class="pic van move-left200"><img class="speaker-round" src="img/speakers/speaker_img1.jpg" alt=""></div>
+                <div class="speaker-descr van move-left170">
+                    <div class="speaker-name themeColor">Наталія Чорній</div>
+                    <div class="social-row-mobile">
+                        <a href="https://www.facebook.com/profile.php?id=100006137686045" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    </div>
+                    <div class="speaker-position">Керівник відділу персоналу РК ЖЖУК</div>
+                    <div class="speaker-about">HR з більш ніж 13 літнім досвідом роботи в сферах FMCG, Retail та будівництва.</div>
+                </div>
+                <div class="social-square van move-left150">
+                    <a href="https://www.facebook.com/profile.php?id=100006137686045" class="social-icon2" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </div>
+            </div>
+            <div id="speaker-card" class="one">
+                <div class="pic van move-left200"><img class="speaker-round" src="img/speakers/speaker_img2.jpg" alt=""></div>
+                <div class="speaker-descr van move-left170">
+                    <div class="speaker-name themeColor">Оксана Тюпа</div>
+                    <div class="social-row-mobile">
+                        <a href="https://www.facebook.com/oksana.tjupa" class="social-icon2" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://plus.google.com/+OksanaTjupa" class="social-icon2" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+                        <a href="https://twitter.com/otjupa" class="social-icon2" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.linkedin.com/in/oksanatjupa/" class="social-icon2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="speaker-position">Співзасновник рекрутингового агенства Sniper</div>
+                    <div class="speaker-about">Власниця Advertising School, партнер Рекрутингового Агентства Sniper, волонтер «Центру Зайнятості Вільних людей», громадський діяч.</div>
+                </div>
+                <div class="social-square van move-left150">
+                    <a href="https://www.facebook.com/oksana.tjupa" class="social-icon2" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://plus.google.com/+OksanaTjupa" class="social-icon2" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+                    <a href="https://twitter.com/otjupa" class="social-icon2" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.linkedin.com/in/oksanatjupa/" class="social-icon2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div id="speaker-card" class="one">
+                <div class="pic van move-left200"><img class="speaker-round" src="img/speakers/speaker_img3.jpg" alt=""></div>
+                <div class="speaker-descr van move-left170">
+                    <div class="speaker-name themeColor">Євген Семехін</div>
+                    <div class="social-row-mobile">
+                        <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+                        <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="speaker-position">Керуючий партнер в Україні агентства прикладного нейромаркетингу Agny</div>
+                    <div class="speaker-about">Входить в ТОП-12 PR-фахівців України 2016 року, категорія "Високопотенційні PR-профі". Постійний доповідач найбільших профільних конференцій в України.
+</div>
+                </div>
+                <div class="social-square van move-left150">
+                    <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+                    <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div id="speaker-card" class="one">
+                <div class="pic van move-left200"><img class="speaker-round" src="img/speakers/speaker_img4.jpg" alt=""></div>
+                <div class="speaker-descr van move-left170">
+                    <div class="speaker-name themeColor">Михайло Тустов</div>
+                    <div class="social-row-mobile">
+                        <a href="https://www.facebook.com/mikhail.tustov" class="social-icon2" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+                        <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="speaker-position">Тренер Академії ДТЕК</div>
+                    <div class="speaker-about">Тренер Академії ДТЕК, бізнес-тренер, коуч, гейміфікатор, консультант з управління персоналом.</div>
+                </div>
+                <div class="social-square van move-left150">
+                    <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.facebook.com/events/287983468403878/#" class="social-icon2" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+                    <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.facebook.com/events/287983468403878/" class="social-icon2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="scroll-spy" data-menu-id="new-pricing" id="pricing">
+        <div class="header-white">Квитки на форум </div>
+        <div class="sub-payment-text">Ви можете здійснити оплату квитків як від юридичної особи (договір/акт) так і від фізичної особи (картка/готівка).<br>У разі оплати від юр. особи надішліть нам e-mail чи вкажіть це в реєстраційній формі.<br>Є три цінові періоди "Ранній", "Midl" та "Крайній".<br>Чим раніше Ви купуєте квиток тим вигідніше для ВАС!<br>"Mild" період завершується вже 03 червня 2018 року!</div>
+        <div class="low-prices">Найнижчі ціни</div>
+        <div class="pricing-options">
+            <div class="option">
+                <div class="lable">Стандарт</div>
+                <div class="price">1 490 грн</div>
+                <div class="options">
+                    <ul>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>При оплаті до 03.06.18</li>
+                        <li class="no"><i class="fa fa-check" aria-hidden="true"></i>1 квиток</li>
+                        <li class="no"><i class="fa fa-check" aria-hidden="true"></i>Кава-пауза</li>
+                        <li class="no"><i class="fa fa-check" aria-hidden="true"></i>Сертифікат</li>
+                        <li class="no"><i class="fa fa-" aria-hidden="true"></i> </li>
+                    </ul>
+                </div>
+                <div id="scrolling" class="submit-btn-margin">
+                    <a href="#home"><input class="submit-btn" type="submit" value="ПРИДБАТИ!"></a>
+                </div>
+            </div>
+            <div class="option2">
+                <div class="lable-green">1+1</div>
+                <div class="price">2 390 грн</div>
+                <div class="options">
+                    <ul>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>При оплаті до 03.06.18</li>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>2 квитки</li>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>Кава-пауза</li>
+                        <li class="no"><i class="fa fa-check" aria-hidden="true"></i>Сертифікати</li>
+                        <li class="no"><i class="fa fa-" aria-hidden="true"></i> </li>
+                    </ul>
+                </div>
+                <div id="scrolling2" class="submit-btn-margin">
+                    <a href="#home"><input class="submit-btn3" type="submit" value="ПРИДБАТИ!"></a>
+                </div>
+            </div>
+            <div class="option">
+                <div class="lable">Преміум</div>
+                <div class="price">1 750 грн</div>
+                <div class="options">
+                    <ul>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>При оплаті до 03.06.18</li>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>Квиток у 1-2 ряді</li>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>Кава-пауза</li>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>Сертифікат</li>
+                        <li class="yes"><i class="fa fa-check" aria-hidden="true"></i>Сюрприз</li>
+                    </ul>
+                </div>
+                <div id="scrolling3" class="submit-btn-margin">
+                    <a href="#home"><input class="submit-btn" type="submit" value="ПРИДБАТИ!"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="scroll-spy" data-menu-id="new-testimonials" id="testimonials">
+        <div class="header">Відгуки попередніх учасників</div>
+        <div class="testimonial-wrap">
+            <div class="the-testimonial">
+                <img class="testim-img" src="img/testim/ovch.jpg" alt="">
+                <div class="testim-name">Дмитрий Овчинников</div>
+                <div class="testim-position"> </div>
+                <p class="testim-body">Это мероприятие, на котором можно познакомиться с очень интересными людьми, отследить тенденции, получить массу удовольствия и кейсов от спикеров с большим опытом!</p>
+            </div>
+            <div class="the-testimonial">
+                <img class="testim-img" src="img/testim/kalab.jpg" alt="">
+                <div class="testim-name">Людмила Калабуха</div>
+                <div class="testim-position">Експерт з продажів</div>
+                <p class="testim-body">Кілька разів брала участь в форумі. Чудові учасники, сильні спікери, атмосфера творчості, молодого запалу, відповідальне ставлення організаторів.</p>
+            </div>
+            <div class="the-testimonial">
+                <img class="testim-img" src="img/testim/kristin.jpg" alt="">
+                <div class="testim-name">Христина Потапенко</div>
+                <div class="testim-position">Директор благодійного фонду</div>
+                <p class="testim-body">Знання отримані на форумі допомогли мені в побудові hr департаменту в моїй організації. Спасибі, за можливість навчатись якісно за помірну ціну</p>
+            </div>
+        </div>
+            <div class="more-test">
+                <a href="https://www.facebook.com/pg/HRTodayJCI/reviews/" target="_blank" class="corp-link">Більше відгуків</a>
+            </div>
+    </section>
+    
+    <section id="faq">
+        <div class="header-white">Часті запитання</div>
+        <div class="faq-wrap">
+            <div class="section_header">Чи надається житло для іногородніх?</div>
+                <div class="section_para"><p class="faq-answer">Якщо вам потрібна допомога з проживанням у Києві - дайте нам знати! Ми порекомендуємо вам готель, хостел чи квартиру відповідно до ваших побажань.</p></div>
+            <div class="section_header">Чи можна оплатити участь від імені компанії?</div>
+            <div class="section_para"><p class="faq-answer">Звісно можна. Зателефонуйте нам або ж одразу надішліть листа з даними вашої компанії і ми залюбки надішлемо Вам рахунок на оплату та необхідні документи.</p></div>
+            <div class="section_header">Чи можна повернути придбаний квиток?</div>
+            <div class="section_para"><p class="faq-answer">Так, але не пізніше ніж 10 днів до початку форуму. В такому разі вам буде повернено 100% вартості квитка. В інших випадках вартість придбаного квитка не відшкодовується.</p></div>
+            <div class="section_header">Чи є акційні пропозиції/знижки?</div>
+            <div class="section_para"><p class="faq-answer">Є студентська знижка - 40% від вартості квитка. А також пропозиція 1+1 - з друзями завжди веселіше.</p></div>
+        </div>
+        
+    </section>
+    
+    <section id="organizer">
+        <div class="header">Організатор</div>
+        <div class="partn-general">
+            <div class="partn-general-img"><a href="https://www.facebook.com/jandoevents" target="_blank"><img src="img/events-ua.png" class="color-logo"></a></div>
+        </div>
+    </section>
+    
+    <section id="photo">
+        <div class="header-white">Фотоспогади попередніх подій</div>
+        <div class="slideshow">
+            <ul id="slides">
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide1.jpg" class="slide-style">
+                </li>
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide2.jpg" class="slide-style">
+                </li>
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide3.jpg" class="slide-style">
+                </li>
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide4.jpg" class="slide-style">
+                </li>
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide5.jpg" class="slide-style">
+                </li>
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide6.jpg" class="slide-style">
+                </li>
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide7.jpg" class="slide-style">
+                </li>
+                <li data-delay="1000">
+                    <img src="img/slideshow/slide8.jpg" class="slide-style">
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="scroll-spy" data-menu-id="new-partners" id="partners">
+        <div class="header">Партнери форуму</div>
+        <div class="container">
+            <section class="customer-logos slider">
+                <div class="slide"><a href="https://teammaster.pro/" target="_blank"><img src="img/partners/teammaster.png" alt="Team Master" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://k-l.com.ua/" target="_blank"><img src="img/partners/partner1.png" alt="Кадровик light" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://www.krok.edu.ua/" target="_blank"><img src="img/partners/krok.png" alt="Університет КРОК" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://www.prgrf.com/" target="_blank"><img src="img/partners/paragraph.png" alt="Параграф" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://www.coffice.ua/" target="_blank"><img src="img/partners/coffice.png" alt="Cofice" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://bs.krok.edu.ua/en/" target="_blank"><img src="img/partners/bsk.png" alt="Krok Business School" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://bodocard.ua/" target="_blank"><img src="img/partners/bodocard.png" alt="Мультибрендовый подарочный сертификат" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://4hub.com.ua/" target="_blank"><img src="img/partners/hub40.png" alt="HUB 4.0" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://bogushtime.com/" target="_blank"><img src="img/partners/bogush.png" alt="Bogush Time" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://hrliga.com/" target="_blank"><img src="img/partners/hr_liga.png" alt="HR-Лига - Сообщество кадровиков" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://zismakom.com/" target="_blank"><img src="img/partners/zismakom.png" alt="Зі смаком" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://kiev.hh.ua/" target="_blank"><img src="img/partners/hh.png" alt="Head Hunter" class="partner-logo"></a></div>
+                <div class="slide"><img src="img/partners/danone.png" alt="Danone" class="partner-logo"></div>
+                <div class="slide"><a href="http://topkniga.com.ua/" target="_blank"><img src="img/partners/top-kniga.png" alt="Top Kniga. Быстро. Выгодно. Удобно." class="partner-logo"></a></div>
+                <div class="slide"><a href="https://dou.ua/" target="_blank"><img src="img/partners/dou.png" alt="DOU: Сообщество программистов" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://www.jciyouth.com/" target="_blank"><img src="img/partners/partner2.png" alt="JCI Youth" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://mim.kiev.ua/" target="_blank"><img src="img/partners/mim.png" alt="" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://shulga-massage.com/" target="_blank"><img src="img/partners/shulga.png" alt="Shulga" class="partner-logo"></a></div>
+                <div class="slide"><a href="http://www.advertisingschool.com.ua/" target="_blank"><img src="img/partners/adschool.png" alt="Advertising School" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://42magnets.com/uk/" target="_blank"><img src="img/partners/42magnets.png" alt="42 Magnets" class="partner-logo"></a></div>
+                <div class="slide"><a href="https://www.facebook.com/SmakoTaya/" target="_blank"><img src="img/partners/smakotaia.png" alt="Пряничная мастерская СмакоТая" class="partner-logo"></a></div>
+            </section>
+<!--
+            <div class="more-test">
+                <a href="become_a_partner.html" target="_blank" class="corp-link">Стати партнером</a>
+            </div>
+-->
+
+        </div>
+    </section>
+        
+    <section class="scroll-spy" data-menu-id="new-venue" id="venue">
+        <div class="venue-content">
+            <div class="header-white">Контакти</div>
+            <div class="venue-blocks">
+                <div class="block">
+                    <i class="fas fa-phone ico"></i>
+                    <p class="block-text">
+                        <img class="social_icon" src="img/social/viber.png" alt="Viber">
+                        <img class="social_icon" src="img/social/Telegram.png" src="" alt="Telegram">
+                        <img class="social_icon" src="img/social/whatsup.png" src="" alt="WhatsApp">
+                    </p>
+                    <p class="block-text">+38 063 6386 871</p>
+                </div>
+                <div class="block">
+                    <i class="fas fa-map-marker-alt ico"></i>
+                    <p class="block-text">IQ Business Center</p>
+                    <p class="block-text">вул. Болсуновська 13-15, Київ</p>
+                </div>
+                <div class="block">
+                    <i class="far fa-envelope ico"></i>
+                    <p class="block-text">hr@jo.in.ua</p>
+                    <p class="block-text">oksana.myronko@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2542.0620799985627!2d30.551281575746422!3d50.42131497764801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x40d4cf6e072b61a3%3A0x28b8941f826fe32!2zSVEg0JHRltC30L3QtdGBLdGG0LXQvdGC0YA!3m2!1d50.421336!2d30.553472!5e0!3m2!1sru!2sua!4v1524081611787" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    
+    <section id="subscription">
+        <div class="subscr_header">Підписатись на новини</div>
+        <form id="signup" action="/BeEvent/demo-2/with-paypal/newsletter.php" method="post" onsubmit="event.preventDefault(); window.subscribe();">
+            <div class="form-group newsletter-input">
+                <input type="text" name="email" id="subscribe-email" class="form-control" placeholder="Email адреса">
+            </div>
+          <button type="submit" name="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          <div id="no-spam"></div>
+        </form>
+    </section>
+    
+    <section id="footer">
+        <div class="footer-wrap">
+            <div class="copyright">© 2017 Всі права захищені.</div>
+            <h1 class="logo2">
+                <a href="#home" class="logo-link"><img class="logo" src="img/logo.png" alt="7-й HR івент. Менеджмент та люди"></a>
+            </h1>
+            <div class="social-icons-row">
+                <a href="https://www.facebook.com/HRTodayJCI/" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<!--
+                <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+-->
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <div id="myBtn"><a href="#home" class="test_link"><i class="fa fa-angle-up" aria-hidden="true"></i></a></div>
+    
+    <div class="small-menu">
+        <div class="burger-button">
+            <label>
+                <input id="rest-check" type="checkbox" onchange="$('#mobile-menu').css({display: this.checked ? 'block' : 'none'})">
+                <div class="line20"></div>
+                <div class="line20"></div>
+                <div class="line20"></div>                
+            </label>
+        </div>
+        <div id="mobile-menu">
+            <ul class="menu-items">
+                <a href="#home" id="new-home" class="menu-link"><li class="mobile-menu-list-item">Головна</li></a>
+                <a href="#about" id="new-about" class="menu-link"><li class="mobile-menu-list-item">Форум</li></a>
+                <a href="#schedule" id="new-schedule" class="menu-link"><li class="mobile-menu-list-item">Програма</li></a>
+                <a href="#speakers" id="new-speakers" class="menu-link"><li class="mobile-menu-list-item">Спікери</li></a>
+                <a href="#pricing" id="new-pricing" class="menu-link"><li class="mobile-menu-list-item">Квитки</li></a>
+                <a href="#venue" id="new-venue" class="menu-link"><li class="mobile-menu-list-item">Контакти</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+
+        <div class="modal-inner">
+            <div id="modal-close-btn" onclick="$('#register-modal').removeClass('shown')" class="close-btn">✕</div>
+            <p class="pre-order-header">Дякуємо за зацікавленість в нашому HR форумі!</p>
+            <p class="pre-order-text">Наразі оберіть тип квитка та варіант оплати.<br>За необхідності здійснити оплату від юридичної особи, зазначте реквізити компанії (назва, ЄДРПОУ, адреса, ПІБ керівника).<br>Після отримання реквізитів ми надішлемо Вам рахунок на оплату і до зустрічі на форумі :) !</p>
+            <select id="ticket-type" class="input" onchange="loadPaymentButton(this.value); $('#second-visitor-name').css({display: this.value === 'one-plus-one' ? 'block' : 'none'})">
+                <option value="">Тип квитка</option>
+                <option value="standard">Стандарт (1 200 грн.)</option>
+                <option value="one-plus-one">1+1 (2 000 грн.)</option>
+                <option value="premium">Преміум (1 500 грн.)</option>
+            </select>
+
+			<input class="input2" placeholder="Прізвище та ім'я другого учасника" type="text" id="second-visitor-name" style="display:none">
+
+            <select id="payment-type" class="input" onchange="
+			loadPaymentButton($('#ticket-type').val()); 
+			">
+                <option value="">Варіант оплати</option>
+                <option value="money">Оплата карткою або готівкою</option>
+                <option value="company">Оплата від юридичної особи</option>
+            </select>
+			
+			<input class="input2" placeholder="Промо код" type="text" id="promo-code" oninput="loadPaymentButton()">
+            <input class="input2" placeholder="Звiдки Ви дiзнались про форум?" type="text" id="link-source">
+
+            <textarea placeholder="Зазначте реквізити для рахунку на оплату" class="pre-puchase-com" id="comment" style="display:none"></textarea>
+
+            <div id="pay-button" onclick="sendEmail()"></div>
+            <div id="pay-company-button" class="submit-btn2" onclick="registerAsCompany()" style="display: none">Зарегистрироваться</div>
+        </div>
+
+    </div>
+
+    <div id="success-modal" class="modal">
+
+        <div class="modal-inner">
+            <div id="modal-close-btn" onclick="$('#success-modal').removeClass('shown')" class="close-btn">✕</div>
+            
+			<div id="success-modal-message">
+			<b>Дякуємо за реєстрацію!</b><br><br>Ми сформуємо рахунок якомога швидше та надішлемо на вказану при реєстрації електронну адресу.<br>
+			Вдалого дня та до зустрічі на форумі!<br><br>
+			<b>З повагою,</b><br>
+			команда<br>J&O Events
+			</div>
+        </div>
+
+    </div>
+   
+    <script src="js/timer.js"></script>
+    <script>
+        
+    //  Подсвечивание активных пунктов меню
+    function detectCurrentSection()
+    {
+        var sections = document.getElementsByClassName('scroll-spy');  // Получаем все секции
+        for(var i = 0, len = sections.length; i < len; i++){ // Обходим секции в цикле.
+        var box = sections[i].getBoundingClientRect(); // {top: 0, left: 0, width: 0, height: 0}   // Получаем положение секции относительно окна.
+        if(box.top > -20 && box.top < 400)
+            { // Если секция в пределах 400px от верха окна...
+                var menuId = sections[i].getAttribute('data-menu-id');  // Получаем ID активного пункта меню.
+                $('.linkItem, .menu-link').removeClass('active');  // Удаляем класс active с всех пунктов меню.
+                $('#' + menuId).addClass('active');  // Добавляем класс active пункту меню с ID, полученным с атрибута секции.
+                break;  // Прерываем цикл.
+            }
+        }
+    }
+    $(document).ready(function(){
+        window.onscroll = detectCurrentSection;
+    });
+
+
+    // Смена фона меню при скроле более чем на 100 пикселей
+    $(window).scroll(function(e) {
+      var height = $(this).scrollTop();
+      $('.center')[height >= 100 ? 'addClass' : 'removeClass']('active')
+    });
+        
+        
+    // Show/hide mobile menu
+    $('section').on('click', function(){
+        document.getElementById('mobile-menu').style.display = 'none';
+        document.getElementById('rest-check').checked = false;
+    });
+
+
+    // Плавный скрол к якорным ссылкам
+     $(document).ready(function(){
+        $("#logo, #scrolling, #scrolling2, #scrolling3, #mainMenu, #myBtn, #mobile-menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1300);
+        });
+    });
+
+
+    //  Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 800) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+        
+    </script>
+   </body>
+</html>
